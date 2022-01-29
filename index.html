@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Vue</title>
+</head>
+<script src="https://unpkg.com/vue@3.0.2"></script>
+
+<body>
+    <h1>Hello Vue</h1>
+
+
+    <div id="app">
+        <div v-if="showCars">{{name}}-{{location}}-{{milage}}
+        <li v-for="car in cars">
+            <h4>{{car.name}}</h4>
+            <p>{{car.location}}</p>
+            <p>{{car.milage}}</p>
+        </li>
+    </div>
+        <button @click="milage++">Increase Milage</button>
+        <button @click="milage--">Decrease Milage</button>
+        <button @click="changeName('Toyota')">Change Name</button>
+        <button @click="revealCars()"> 
+            <span v-if="!showCars">Show Cars</span>
+            <span v-else>Hide Cars</span>
+        </button>
+        
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
